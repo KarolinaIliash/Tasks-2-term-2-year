@@ -34,28 +34,6 @@ public:
 	}
 };
 
-class Client2 : public Observer {
-private:
-	vector<string> getting_mag;
-	vector<string> interests;
-public:
-	Client2(vector<string> inter) {
-		interests.resize(inter.size());
-		interests = inter;
-	}
-	vector<string> get_mags() override {
-		return getting_mag;
-	}
-	bool is_interested(string mag) override {
-		for (int i = 0; i < interests.size(); i++)
-			if (mag == interests[i]) return 1;
-		return 0;
-	}
-	void Update(string mag) override {
-		if (is_interested(mag))
-			getting_mag.push_back(mag);
-	}
-};
 
 class Subject {//post
 private:

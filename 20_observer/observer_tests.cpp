@@ -1,4 +1,4 @@
-/*#define CATCH_CONFIG_MAIN
+#define CATCH_CONFIG_MAIN
 
 #include"catch.hpp"
 #include"observe.h"
@@ -104,4 +104,4 @@ TEST_CASE("Observer") {
 			REQUIRE(ob1->get_mags() == test);
 		}
 	}
-}*/
+}
