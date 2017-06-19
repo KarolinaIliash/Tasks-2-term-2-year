@@ -1,4 +1,3 @@
-#pragma once
 #define CATCH_CONFIG_MAIN
 #include"../Tasks_2_term/catch.hpp"
 
