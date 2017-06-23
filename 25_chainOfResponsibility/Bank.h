@@ -10,6 +10,9 @@ public:
 	void setNext(Action* _next);
 	void add(Action* _next);
 	virtual std::string handle(Payment* p);
+	~Action() {
+		delete next;
+	}
 };
 
 class Fix : public Action {
@@ -34,4 +37,7 @@ class Bank {
 public:
 	Bank();
 	std::string make(Payment* p);
+	~Bank() {
+		delete start;
+	}
 };
